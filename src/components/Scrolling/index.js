@@ -47,14 +47,6 @@ const Scrolling = () => {
               alt="Apple"
               className="w-40 h-40 md:w-48 -mt-8 object-contain cursor-pointer"
             />
-            <div className="flex flex-col gap-2">
-              <div
-                className="w-8 h-8 md:w-10 md:h-10 rounded-full bg-red-600 flex items-center justify-center cursor-pointer"
-                title="Add To Cart"
-              >
-                <MdAddShoppingCart className="text-white" />
-              </div>
-            </div>
           </div>
           <div className="w-full flex items-end justify-end flex-col">
             <p className="text-textColor font-semi-bold text-lg">Apple</p>
@@ -73,14 +65,6 @@ const Scrolling = () => {
               alt="Blueberries"
               className="w-40 h-40 md:w-48 -mt-8 object-contain cursor-pointer"
             />
-            <div className="flex flex-col gap-2">
-              <div
-                className="w-8 h-8 md:w-10 md:h-10 rounded-full bg-red-600 flex items-center justify-center cursor-pointer"
-                title="Add To Cart"
-              >
-                <MdAddShoppingCart className="text-white" />
-              </div>
-            </div>
           </div>
           <div className="w-full flex items-end justify-end flex-col">
             <p className="text-textColor font-semi-bold text-lg">Blueberries</p>
@@ -99,14 +83,6 @@ const Scrolling = () => {
               alt="Pinneapple"
               className="w-40 h-40 md:w-48 -mt-8 object-contain cursor-pointer"
             />
-            <div className="flex flex-col gap-2">
-              <div
-                className="w-8 h-8 md:w-10 md:h-10 rounded-full bg-red-600 flex items-center justify-center cursor-pointer"
-                title="Add To Cart"
-              >
-                <MdAddShoppingCart className="text-white" />
-              </div>
-            </div>
           </div>
           <div className="w-full flex items-end justify-end flex-col">
             <p className="text-textColor font-semi-bold text-lg">Pinneapple</p>
@@ -124,14 +100,6 @@ const Scrolling = () => {
               alt="Concord"
               className="w-40 h-40 md:w-48 -mt-8 object-contain cursor-pointer"
             />
-            <div className="flex flex-col gap-2">
-              <div
-                className="w-8 h-8 md:w-10 md:h-10 rounded-full bg-red-600 flex items-center justify-center cursor-pointer"
-                title="Add To Cart"
-              >
-                <MdAddShoppingCart className="text-white" />
-              </div>
-            </div>
           </div>
           <div className="w-full flex items-end justify-end flex-col">
             <p className="mt-1 text-sm text-gray-500">Concord grapes</p>
@@ -149,14 +117,6 @@ const Scrolling = () => {
               alt="Banana"
               className="w-40 h-40 md:w-48 -mt-8 object-contain cursor-pointer"
             />
-            <div className="flex flex-col gap-2">
-              <div
-                className="w-8 h-8 md:w-10 md:h-10 rounded-full bg-red-600 flex items-center justify-center cursor-pointer"
-                title="Add To Cart"
-              >
-                <MdAddShoppingCart className="text-white" />
-              </div>
-            </div>
           </div>
           <div className="w-full flex items-end justify-end flex-col">
             <p className="text-textColor font-semi-bold text-lg">Banana</p>
@@ -175,14 +135,6 @@ const Scrolling = () => {
               alt="Watermelon"
               className="w-40 h-40 md:w-48 -mt-8 object-contain cursor-pointer"
             />
-            <div className="flex flex-col gap-2">
-              <div
-                className="w-8 h-8 md:w-10 md:h-10 rounded-full bg-red-600 flex items-center justify-center cursor-pointer"
-                title="Add To Cart"
-              >
-                <MdAddShoppingCart className="text-white" />
-              </div>
-            </div>
           </div>
           <div className="w-full flex items-end justify-end flex-col">
             <p className="text-textColor font-semi-bold text-lg">Watermelon</p>
@@ -201,14 +153,6 @@ const Scrolling = () => {
               alt="Pomegranate"
               className="w-40 h-40 md:w-48 -mt-8 object-contain cursor-pointer"
             />
-            <div className="flex flex-col gap-2">
-              <div
-                className="w-8 h-8 md:w-10 md:h-10 rounded-full bg-red-600 flex items-center justify-center cursor-pointer"
-                title="Add To Cart"
-              >
-                <MdAddShoppingCart className="text-white" />
-              </div>
-            </div>
           </div>
           <div className="w-full flex items-end justify-end flex-col">
             <p className="text-textColor font-semi-bold text-lg">Pomegranate</p>
@@ -226,14 +170,6 @@ const Scrolling = () => {
               alt="Raspberry"
               className="w-40 h-40 md:w-48 -mt-8 object-contain cursor-pointer"
             />
-            <div className="flex flex-col gap-2">
-              <div
-                className="w-8 h-8 md:w-10 md:h-10 rounded-full bg-red-600 flex items-center justify-center cursor-pointer"
-                title="Add To Cart"
-              >
-                <MdAddShoppingCart className="text-white" />
-              </div>
-            </div>
           </div>
           <div className="w-full flex items-end justify-end flex-col">
             <p className="text-textColor font-semi-bold text-lg">Raspberry</p>
@@ -252,14 +188,6 @@ const Scrolling = () => {
               alt="Strawberry"
               className="w-40 h-40 md:w-48 -mt-8 object-contain cursor-pointer"
             />
-            <div className="flex flex-col gap-2">
-              <div
-                className="w-8 h-8 md:w-10 md:h-10 rounded-full bg-red-600 flex items-center justify-center cursor-pointer"
-                title="Add To Cart"
-              >
-                <MdAddShoppingCart className="text-white" />
-              </div>
-            </div>
           </div>
           <div className="w-full flex items-end justify-end flex-col">
             <p className="text-textColor font-semi-bold text-lg">Strawberry</p>

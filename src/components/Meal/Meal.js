@@ -24,14 +24,14 @@ const Meal = ({ meal, toggleModal, setMealItem }) => {
 
   return (
     <div
-      className="w-[320px] min-w-[320px] md:w-[300px] md:min-w-[300px] my-12 h-auto bg-cardOverlay rounded-lg p-2 px-3 backdrop-blur-lg hover:drop-shadow-sm"
+      className="w-[220px] md:w-[300px] md:min-w-[300px] my-12 h-auto bg-cardOverlay rounded-lg p-2 px-3 backdrop-blur-lg hover:drop-shadow-sm"
       id={idMeal}
     >
       <div className="w-full flex items-center justify-around md:justify-between">
         <img
           src={strMealThumb}
           alt={strMeal}
-          className="w-36 h-36 md:w-40 md:h-40 -mt-8 rounded-xl object-contain cursor-pointer"
+          className="w-28 h-36 md:w-40 md:h-40 -mt-8 rounded-xl object-contain cursor-pointer"
           onClick={(e) => {
             toggleModal();
             setMealItem(strMeal);
