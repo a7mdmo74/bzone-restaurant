@@ -62,9 +62,7 @@ export const dishesSlice = createSlice({
       state.loading = false;
       state.categories = action.payload;
     },
-    [getDishesCategories.rejected]: (state, action) => {
-      console.log(state);
-    },
+    [getDishesCategories.rejected]: (state, action) => {},
     [getMeals.pending]: (state, action) => {
       state.loading = true;
     },
@@ -72,9 +70,7 @@ export const dishesSlice = createSlice({
       state.loading = false;
       state.meals = action.payload;
     },
-    [getMeals.rejected]: (state, action) => {
-      console.log(state);
-    },
+    [getMeals.rejected]: (state, action) => {},
     [getMeal.pending]: (state, action) => {
       state.loading = true;
     },
@@ -82,9 +78,7 @@ export const dishesSlice = createSlice({
       state.loading = false;
       state.meal = action.payload;
     },
-    [getMeal.rejected]: (state, action) => {
-      console.log(state);
-    },
+    [getMeal.rejected]: (state, action) => {},
   },
 });
 

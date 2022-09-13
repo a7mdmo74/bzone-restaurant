@@ -10,7 +10,6 @@ const Navigation = () => {
 
   return (
     <div className="flex items-center gap-8">
-      {console.log(cart)}
       <ul className="flex items-center gap-8">
         <li className="md:text-sm lg:text-base text-textColor cursor-pointer hover:text-headingColor duration-100 transition-all ease-in-out">
           <Link to="/">Home</Link>

@@ -7,6 +7,7 @@ import LoginAction from "./LoginAction";
 import MobileNav from "./MobileNav";
 import { UserAuth } from "../../context/AuthContext";
 import { MdLogin } from "react-icons/md";
+import Avatar from "../../assets/avatar.png";
 const Header = () => {
   const [isMobileOn, setIsMobileOn] = useState(false);
   const { user, logout } = UserAuth();
@@ -28,9 +29,13 @@ const Header = () => {
         </Link>
         {/* Navigation */}
         <Navigation />
-        {user ? (
+        {user !== null ? (
           <div className="flex items-center justify-center gap-4">
-            <span className="text-sm">Hi</span>
+            <img
+              src={user.photoURL !== null ? user.photoURL : Avatar}
+              alt="Avatar"
+              className="w-12 h-12 rounded-full border-4 border-gray-400"
+            />
             <button
               className="flex items-center gap-3 border border-slate-200 px-3 py-1 rounded-lg cursor-pointer"
               onClick={handleLogOut}
@@ -58,9 +63,13 @@ const Header = () => {
               <p className="text-headingColor text-xl font-bold">Bentilzone</p>
             </div>
           </Link>
-          {user ? (
+          {user !== null ? (
             <div className="flex items-center justify-center gap-4">
-              <span className="text-xs">Hi, </span>
+              <img
+                src={user.photoURL !== null ? user.photoURL : Avatar}
+                alt="Avatar"
+                className="w-12 h-12 rounded-full border-4 border-gray-400"
+              />
               <button
                 className="flex items-center gap-3 border border-slate-200 px-3 py-1 rounded-lg cursor-pointer"
                 onClick={handleLogOut}

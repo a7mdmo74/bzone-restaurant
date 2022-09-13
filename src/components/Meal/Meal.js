@@ -14,7 +14,7 @@ const Meal = ({ meal, toggleModal, setMealItem }) => {
   const cart = useSelector((state) => state.cart);
   const handleAddCart = () => {
     if (user) {
-      dispatch(addToCart(meal));
+      dispatch(addToCart({ ...meal, price: 25 }));
       toast.success(`${strMeal} add to cart successfully`);
     } else {
       toast.error("Login to add to cart");
@@ -24,14 +24,14 @@ const Meal = ({ meal, toggleModal, setMealItem }) => {
 
   return (
     <div
-      className="w-[220px] md:w-[300px] md:min-w-[300px] my-12 h-auto bg-cardOverlay rounded-lg p-2 px-3 backdrop-blur-lg hover:drop-shadow-sm"
+      className="w-[179px] md:w-[300px] md:min-w-[300px] my-6 md:my-12 h-auto bg-cardOverlay rounded-lg p-2 px-3 backdrop-blur-lg hover:drop-shadow-sm"
       id={idMeal}
     >
       <div className="w-full flex items-center justify-around md:justify-between">
         <img
           src={strMealThumb}
           alt={strMeal}
-          className="w-28 h-36 md:w-40 md:h-40 -mt-8 rounded-xl object-contain cursor-pointer"
+          className="w-20 h-20 md:w-40 md:h-40 -mt-8 rounded-xl object-contain cursor-pointer"
           onClick={(e) => {
             toggleModal();
             setMealItem(strMeal);
@@ -47,7 +47,12 @@ const Meal = ({ meal, toggleModal, setMealItem }) => {
         </div>
       </div>
       <div className="w-full flex items-end justify-end flex-col my-4">
-        <p className="text-textColor font-semi-bold text-lg">{strMeal}</p>
+        <p className="text-textColor font-semi-bold text-sm md:text-lg">
+          {strMeal}
+        </p>
+        <p>
+          Price: <span className="text-red-600 font-semibold">25£</span>
+        </p>
       </div>
     </div>
   );

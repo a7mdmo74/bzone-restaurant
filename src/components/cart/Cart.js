@@ -12,11 +12,11 @@ const Cart = () => {
     <div
       className={
         isCart
-          ? "w-full md:w-1/4 bg-white fixed top-0 right-0 transition-all duration-500 p-4 z-50 min-h-screen shadow-xl"
-          : "w-full md:w-1/4 bg-white fixed top-0 -right-full transition-all duration-500 p-4 z-50 min-h-screen shadow-xl"
+          ? "w-full h-screen md:w-[350px] bg-white md:backdrop-blur-sm flex flex-col z-[101] drop-shadow-xl fixed top-0 right-0 transition-all duration-500 min-h-screen shadow-xl overflow-y-scroll"
+          : "w-full md:w-1/4 bg-white fixed top-0 -right-full transition-all duration-500 p-4 z-50 min-h-screen shadow-xl overflow-y-scroll"
       }
     >
-      <div className="w-full flex items-center justify-between">
+      <div className="w-full flex items-center bg-white justify-between px-4 py-2 cursor-pointer">
         <button onClick={closeCart}>
           <HiOutlineArrowNarrowRight className="text-xl" />
         </button>

@@ -17,7 +17,9 @@ const Meals = ({ meal }) => {
     setIsLoading(true);
     try {
       dispatch(getMeals(meal));
-      setIsLoading(false);
+      setTimeout(() => {
+        setIsLoading(false);
+      }, 1500);
     } catch (error) {
       setIsLoading(false);
       console.warn(error.message);
@@ -25,19 +27,22 @@ const Meals = ({ meal }) => {
   }, [dispatch, meal]);
   return (
     <section className="w-full my-5 relative">
-      <div className="bg-containerbg w-full my-12 flex items-center justify-center   min-h-[200px] gap-4  px-2 overflow-x-hidden flex-wrap">
-        {isLoading && <Loading />}
-        {meals.map((meal) => {
-          const { idMeal } = meal;
-          return (
-            <Meal
-              key={idMeal}
-              meal={meal}
-              toggleModal={toggleModal}
-              setMealItem={setMealItem}
-            />
-          );
-        })}
+      <div className="bg-containerbg w-full my-12 flex items-center justify-center min-h-[200px] gap-2  md:px-2 overflow-x-hidden flex-wrap">
+        {isLoading ? (
+          <Loading />
+        ) : (
+          meals.map((meal) => {
+            const { idMeal } = meal;
+            return (
+              <Meal
+                key={idMeal}
+                meal={meal}
+                toggleModal={toggleModal}
+                setMealItem={setMealItem}
+              />
+            );
+          })
+        )}
       </div>
       {showModal && (
         <Modal

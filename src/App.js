@@ -9,7 +9,17 @@ import { CartContextProvider } from "./context/CartContext";
 function App() {
   return (
     <div className="w-screen h-auto min-h-[100vh] flex flex-col bg-primary">
-      <ToastContainer />
+      <ToastContainer
+        position="top-left"
+        autoClose={3000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+      />
       <CartContextProvider>
         <Header />
         <Cart />
