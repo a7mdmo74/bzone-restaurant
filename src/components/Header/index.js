@@ -8,8 +8,7 @@ import MobileNav from "./MobileNav";
 import { UserAuth } from "../../context/AuthContext";
 import { MdLogin } from "react-icons/md";
 import Avatar from "../../assets/avatar.png";
-const Header = () => {
-  const [isMobileOn, setIsMobileOn] = useState(false);
+const Header = ({ isMobileOn, setIsMobileOn }) => {
   const { user, logout } = UserAuth();
   const navigate = useNavigate();
   const handleLogOut = async () => {

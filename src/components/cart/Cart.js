@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 import Body from "./Body";
 import { HiOutlineArrowNarrowRight } from "react-icons/hi";
 import { CartState } from "../../context/CartContext";
-const Cart = () => {
+const Cart = ({ setIsMobileOn }) => {
   const { user } = UserAuth();
   const { isCart, closeCart } = CartState();
   return (
@@ -22,15 +22,18 @@ const Cart = () => {
         </button>
         <div className="flex items-center gap-2 justify-center">
           Cart{" "}
-          <span className="text-red-700">
+          <button className="text-red-700">
             <MdShoppingBasket className="text-xl" />
-          </span>
+          </button>
         </div>
         {!user && (
           <Link
             to="/login"
             className="flex items-center gap-2 justify-center"
-            onClick={closeCart}
+            onClick={() => {
+              closeCart();
+              setIsMobileOn(false);
+            }}
           >
             <span className="text-red-700">
               <MdLogin className="text-xl" />

@@ -5,8 +5,11 @@ import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import Cart from "./components/cart/Cart";
 import { CartContextProvider } from "./context/CartContext";
+import { useState } from "react";
 
 function App() {
+  const [isMobileOn, setIsMobileOn] = useState(false);
+
   return (
     <div className="w-screen h-auto min-h-[100vh] flex flex-col bg-primary">
       <ToastContainer
@@ -21,8 +24,8 @@ function App() {
         pauseOnHover
       />
       <CartContextProvider>
-        <Header />
-        <Cart />
+        <Header isMobileOn={isMobileOn} setIsMobileOn={setIsMobileOn} />
+        <Cart setIsMobileOn={setIsMobileOn} />
         <main className="mt-16 md:mt-16 px-3 md:px-8 md:py-6 py-4 w-full h-auto">
           <Routes>
             <Route path="/" element={<Home />} />
