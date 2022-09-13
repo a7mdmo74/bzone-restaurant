@@ -1,6 +1,6 @@
 import { Route, Routes } from "react-router-dom";
 import { Footer, Header } from "./components";
-import { Home, Login, Register, Reset } from "./pages";
+import { Home, Login, Notfound, Register, Reset } from "./pages";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import Cart from "./components/cart/Cart";
@@ -19,6 +19,7 @@ function App() {
             <Route path="/login" element={<Login />} />
             <Route path="/register" element={<Register />} />
             <Route path="/reset-password" element={<Reset />} />
+            <Route path="*" element={<Notfound />} />
           </Routes>
         </main>
       </CartContextProvider>

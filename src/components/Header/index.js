@@ -18,18 +18,20 @@ const Header = () => {
   return (
     <header className="w-screen fixed z-50 bg-cardOverlay backdrop-blur-md md:p-3 md:px-4 lg:p-6 lg:px-16">
       <div className="hidden md:flex w-full justify-between items-center">
-        <div className="flex items-center gap-2 cursor-pointer">
-          <img src={Logo} alt="Logo" className="md:w-6 lg:w-8 object-cover" />
-          <p className="text-headingColor md:text-lg lg:text-xl font-bold">
-            Bentilzone
-          </p>
-        </div>
+        <Link to="/">
+          <div className="flex items-center gap-2 cursor-pointer">
+            <img src={Logo} alt="Logo" className="md:w-6 lg:w-8 object-cover" />
+            <p className="text-headingColor md:text-lg lg:text-xl font-bold">
+              Bentilzone
+            </p>
+          </div>
+        </Link>
         {/* Navigation */}
         <Navigation />
         {user ? (
           <div className="flex items-center justify-center gap-4">
             <span className="text-sm">
-              Hi, {user.displayName !== null ? user.displayName : user.email}
+              Hi, {user.displayName !== null ? user.displayName : ""}
             </span>
             <button
               className="flex items-center gap-3 border border-slate-200 px-3 py-1 rounded-lg cursor-pointer"

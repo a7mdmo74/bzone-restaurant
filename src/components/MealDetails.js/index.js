@@ -26,8 +26,8 @@ const MealDetails = ({ item }) => {
         <img src={strMealThumb} alt={strMeal} className="w-1/3 rounded-lg" />
         <div className="flex flex-col items-center">
           <h3>{strMeal}</h3>
-          <p className="text-xs my-2 text-justify">
-            {strInstructions}{" "}
+          <p className="text-sm my-2 text-justify">
+            {strInstructions.slice(0, 1200)}{" "}
             <a
               href={strYoutube}
               target="_blank"

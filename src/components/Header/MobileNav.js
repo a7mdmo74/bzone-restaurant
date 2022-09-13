@@ -1,10 +1,12 @@
 import React from "react";
 import { MdShoppingBasket, MdOutlineRestaurantMenu } from "react-icons/md";
+import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 import Logo from "../../assets/chef1.png";
 import { CartState } from "../../context/CartContext";
 const MobileNav = ({ isMobileOn, setIsMobileOn }) => {
   const { toggleCart } = CartState();
+  const cart = useSelector((state) => state.cart);
   return (
     <div className="flex flex-col bg-cardOverlay backdrop-blur-sm items-start justify-start gap-16 w-screen h-screen overflow-y-hidden  z-50 overflow-hidden ">
       <div className="flex items-center justify-between w-screen h-24  px-10">
@@ -14,7 +16,9 @@ const MobileNav = ({ isMobileOn, setIsMobileOn }) => {
         >
           <MdShoppingBasket className="text-4xl cursor-pointer" />
           <div className="absolute -top-2 -right-2 w-6 h-6 rounded-full bg-cartNumBg flex items-center justify-center">
-            <p className="text-sm text-white font-semibold">0</p>
+            <p className="text-sm text-white font-semibold">
+              {cart.length === undefined ? "0" : cart.length}
+            </p>
           </div>
         </button>
         <div
