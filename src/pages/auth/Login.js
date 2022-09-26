@@ -1,35 +1,37 @@
-import { useFormik } from "formik";
-import React from "react";
-import { Link, useNavigate } from "react-router-dom";
-import { toast } from "react-toastify";
-import Chef from "../../assets/chef1.png";
-import { loginSchema } from "../../components/schemas/loginSchema";
-import { UserAuth } from "../../context/AuthContext";
+import { useFormik } from 'formik';
+import React from 'react';
+import { Link, useNavigate } from 'react-router-dom';
+import { toast } from 'react-toastify';
+import Chef from '../../assets/chef1.png';
+import { loginSchema } from '../../components/schemas/loginSchema';
+import { UserAuth } from '../../context/AuthContext';
+import { useLocalStorage } from '../../hooks/useLocalStorgae';
 const Login = () => {
-  const navigate = useNavigate("");
+  const navigate = useNavigate('');
   const { user, signIn, signInWithGoogle } = UserAuth();
+  const [gist, setGist] = useLocalStorage('User', user);
   const { values, errors, touched, handleBlur, handleChange, handleSubmit } =
     useFormik({
       initialValues: {
-        email: "",
-        password: "",
+        email: '',
+        password: '',
       },
       validationSchema: loginSchema,
       onSubmit: async (values, actions) => {
         try {
           await signIn(values.email, values.password);
           actions.setSubmitting(false);
-          navigate("/", { replace: true });
-          toast.success("Login successfully!");
+          navigate('/', { replace: true });
+          toast.success('Login successfully!');
         } catch (error) {
-          toast.error("User Not found");
+          toast.error('User Not found');
         }
       },
     });
   const loginGoogle = async () => {
     try {
       await signInWithGoogle();
-      navigate("/", { replace: true });
+      navigate('/', { replace: true });
     } catch (error) {
       toast.error(error.message);
     }
@@ -169,7 +171,7 @@ const Login = () => {
               Login to your account
             </button>
             <div className="text-sm font-medium text-gray-500 dark:text-gray-300">
-              Not registered?{" "}
+              Not registered?{' '}
               <Link
                 to="/register"
                 className="text-blue-700 hover:underline dark:text-blue-500"
