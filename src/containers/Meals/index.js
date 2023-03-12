@@ -1,13 +1,13 @@
-import React, { useEffect, useState } from "react";
-import { useDispatch, useSelector } from "react-redux";
-import Meal from "../../components/Meal/Meal";
-import Loading from "../../components/Loading";
-import { getMeals } from "../../store/features/dishes/dishesSlice";
-import { Modal } from "../../components";
+import React, { useEffect, useState } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import Meal from '../../components/Meal/Meal';
+import Loading from '../../components/Loading';
+import { getMeals } from '../../store/features/dishes/dishesSlice';
+import { Modal } from '../../components';
 const Meals = ({ meal }) => {
   const [isLoading, setIsLoading] = useState(false);
   const [showModal, setShowModal] = useState(false);
-  const [mealItem, setMealItem] = useState("");
+  const [mealItem, setMealItem] = useState('');
   const dispatch = useDispatch();
   const { meals } = useSelector((state) => state.dishes);
   const toggleModal = () => {
